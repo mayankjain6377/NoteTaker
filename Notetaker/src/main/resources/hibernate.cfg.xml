@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/myhiber</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">Mayankjain@6377</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.hbm2ddl.auto">none</property> <!-- Changed to update -->
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
+		<property name="hibernate.hikari.minimumIdle">5</property>
+		<property name="hibernate.hikari.maximumPoolSize">10</property>
+		<property name="hibernate.hikari.idleTimeout">30000</property>
+		<property name="hibernate.hikari.poolName">HikariCP</property>
+
+		<!-- Mapping classes -->
+		<mapping class="com.entities.Note" />
+	</session-factory>
+</hibernate-configuration>
